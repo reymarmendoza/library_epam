@@ -1,0 +1,25 @@
+CREATE SCHEMA `library_epam` DEFAULT CHARACTER SET utf8;
+USE library_epam;
+
+CREATE TABLE `library_epam`.`book` (
+  `idbook` BIGINT(20) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(80) NULL,
+  `author` VARCHAR(45) NULL,
+  `publication` VARCHAR(45) NULL,
+  `publication_date` DATE NULL,
+  `price` INT NULL,
+  PRIMARY KEY (`idbook`));
+
+CREATE TABLE `library_epam`.`reader` (
+`idreader` BIGINT(20) NOT NULL AUTO_INCREMENT,
+`name` VARCHAR(45) NULL,
+`lastname` VARCHAR(45) NULL,
+`email` VARCHAR(90) NULL,
+PRIMARY KEY (`idreader`));
+
+CREATE TABLE `library_epam`.`books_readers` (
+`idbook` BIGINT(20) NULL,
+`idreader` BIGINT(20) NULL);
+
+ALTER TABLE books_readers ADD FOREIGN KEY (idbook) REFERENCES book(idbook);
+ALTER TABLE books_readers ADD FOREIGN KEY (idreader) REFERENCES reader(idreader);

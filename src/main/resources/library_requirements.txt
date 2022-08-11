@@ -1,0 +1,60 @@
+﻿The reader registers in the system and then can: 
+- search (by author / title); 
+- place an order for a Book from the Catalog. 
+An unregistered reader cannot order a book. 
+For the catalog the ability to sort books has to be implemented: 
+- by name; 
+- by author; 
+- by publication; 
+- by date of publication. 
+The librarian gives the reader a book on a subscription or to the reading room. The book is issued to the reader for a certain period. If the book is not returned within the specified period, the reader will be fined. The book may be present in the library in one or more copies. The system keeps track of the available number of books. Each user has a personal account that displays registration information  
+
+
+And also: 
+1) for reader: 
+- list of books on the subscription and date of possible return (if the date is overdue, the amount of the fine is displayed); 
+2) for librarian: 
+- list of readers' orders; 
+- list of readers and their subscriptions. 
+The system administrator has the rights: 
+- adding / deleting a book, editing information about the book; 
+- create / delete librarian; 
+- blocking / unblocking the user.
+
+
+# Requirenments
+- Database: MySQL or PostgreSQL
+- Application should be multilingual
+  - You can use English and Spanish
+  - It should be possible to switch interface language
+  - Support for input/output and storage information in the DB
+  - Dates must be implemented through the package java.time
+- Authentication and autorization must be implemented
+- Use Log4j2 library
+- Code should contain Java doc
+- Application should be covered unit testing and it would be nice to have integration one
+ - For testing purposes it's better to use Mockito
+- Implement pagination
+- All input fields must have data validation
+- Exception handling
+ - User must see friendly messages
+- Additionally (in case if you have time):
+ - add captcha and report generating
+- For user interface use: HTML, CSS, JS framework
+ - you can also use Thymeleaf to create more user friendly interface, it's not hard to understand what to do there
+- It would be nice if you have a commit history in GitLab
+- The application must be structured according to the MVC and Spring Boot architecture
+- Use Project Lombok to generate default methods
+- Recommended to use Spring Resource Bundle
+- Spring Authorization must be used
+- Spring Data or Hibernate
+- Handling Exceptions with ExceptionHandler with Spring for REST API
+- Use Swagger or Actuator is recomended, but only in case if have time
+
+
+—--
+
+
+database creation script
+varenv >> how to attach setting variables
+password in a different table
